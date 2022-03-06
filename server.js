@@ -1,6 +1,7 @@
 // DEPENDENCIES
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const methodOverride = require("method-override");
 const { default: mongoose } = require("mongoose");
 
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 8020;
 // VIEW ENGINE
 
 // MIDDLEWARE
+app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));

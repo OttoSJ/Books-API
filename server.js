@@ -19,11 +19,6 @@ app.use(methodOverride("_method"));
 // ROUTES
 app.use("/books", require("./routes/bookRoutes"));
 
-// app.get("/", (req, res) => {
-//   console.log(`Server Awake on port ${PORT}`);
-//   res.send("Home Page");
-// });
-
 // WILDCARD ROUTE
 app.get("*", (req, res) => {
   res.send("Page not found");
